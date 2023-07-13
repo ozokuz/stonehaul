@@ -1,16 +1,49 @@
 package ozokuz.stonehaul;
 
+import com.mojang.logging.LogUtils;
+import com.tterrag.registrate.Registrate;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import org.slf4j.Logger;
+import ozokuz.stonehaul.common.Content;
+import ozokuz.stonehaul.common.StonehaulCreativeModeTab;
 
-@Mod(Reference.MOD_ID)
+@Mod(Stonehaul.MOD_ID)
 public class Stonehaul {
+    public static final String MOD_ID = "stonehaul";
+    public static final Logger LOGGER = LogUtils.getLogger();
+    public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
+
+    public static ResourceLocation res(String path) {
+        return new ResourceLocation(MOD_ID, path);
+    }
+
     public Stonehaul() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
+
+        StonehaulCreativeModeTab.init();
+        Content.register();
+
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::gatherData);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        Reference.LOGGER.info("Hello from Stonehaul Setup!");
+        LOGGER.info("Hello from Stonehaul Setup!");
+    }
+
+    private void gatherData(final GatherDataEvent event) {
+        DataGenerator gen = event.getGenerator();
+
+        if (event.includeClient()) {}
+
+        if (event.includeServer()) {}
     }
 }
