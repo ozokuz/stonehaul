@@ -107,7 +107,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven { url 'https://maven.tterrag.com/' } // Registrate
-    maven { url 'https://maven.blamejared.com' }
+    maven { url 'https://maven.blamejared.com' } // JEI
     maven {
         url "https://cursemaven.com"
         content { includeGroup "curse.maven" }
@@ -151,6 +151,11 @@ dependencies {
     implementation fg.deobf('curse.maven:farmers-delight-398521:4636009')
     // Make less noise, pls
     runtimeOnly fg.deobf('curse.maven:lazy-dfu-forge-460819:3544496')
+
+    // JEI
+    compileOnly fg.deobf('mezz.jei:jei-1.18.2-common-api:10.2.1.1005')
+    compileOnly fg.deobf('mezz.jei:jei-1.18.2-forge-api:10.2.1.1005')
+    runtimeOnly fg.deobf('mezz.jei:jei-1.18.2-forge:10.2.1.1005')
 
     // Mixins
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

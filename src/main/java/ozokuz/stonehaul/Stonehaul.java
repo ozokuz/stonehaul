@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import ozokuz.stonehaul.common.Content;
 import ozokuz.stonehaul.common.StonehaulCreativeModeTab;
 import ozokuz.stonehaul.data.VanillaRecipeProvider;
+import ozokuz.stonehaul.integration.IntegrationTranslations;
 
 @Mod(Stonehaul.MOD_ID)
 public class Stonehaul {
@@ -30,6 +31,7 @@ public class Stonehaul {
         IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
 
         StonehaulCreativeModeTab.init();
+        IntegrationTranslations.init();
         Content.register();
 
         modEventBus.addListener(this::setup);

@@ -4,5 +4,6 @@
   "item.stonehaul.crude_shovel": "Crude Shovel",
   "item.stonehaul.plant_fiber": "Plant Fiber",
   "item.stonehaul.plant_string": "Plant String",
-  "itemGroup.stonehaul": "Stonehaul"
+  "itemGroup.stonehaul": "Stonehaul",
+  "stonehaul.jei.info.plant_fiber": "An ingredient used in crafting. Obtained by cutting grass with a knife."
 }
