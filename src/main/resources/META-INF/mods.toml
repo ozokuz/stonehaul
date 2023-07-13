@@ -33,7 +33,7 @@ An earlygame overhaul mod.
     modId="farmersdelight"
     mandatory=true
     versionRange="[1.2.2,)"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
 
 [[dependencies.stonehaul]]

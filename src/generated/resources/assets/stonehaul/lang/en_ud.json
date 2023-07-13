@@ -2,5 +2,7 @@
   "item.stonehaul.crude_axe": "\u01DDx\u2C6F \u01DDpn\u0279\u0186",
   "item.stonehaul.crude_hoe": "\u01DDoH \u01DDpn\u0279\u0186",
   "item.stonehaul.crude_shovel": "\u05DF\u01DD\u028Co\u0265S \u01DDpn\u0279\u0186",
+  "item.stonehaul.plant_fiber": "\u0279\u01DDq\u0131\u2132 \u0287u\u0250\u05DF\u0500",
+  "item.stonehaul.plant_string": "bu\u0131\u0279\u0287S \u0287u\u0250\u05DF\u0500",
   "itemGroup.stonehaul": "\u05DFn\u0250\u0265\u01DDuo\u0287S"
 }
