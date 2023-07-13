@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " H",
+    "RB"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:flint"
+    },
+    "B": {
+      "item": "stonehaul:plant_string"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "stonehaul:crude_shovel"
+  }
+}

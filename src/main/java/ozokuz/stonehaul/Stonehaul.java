@@ -13,6 +13,7 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.slf4j.Logger;
 import ozokuz.stonehaul.common.Content;
 import ozokuz.stonehaul.common.StonehaulCreativeModeTab;
+import ozokuz.stonehaul.data.VanillaRecipeProvider;
 
 @Mod(Stonehaul.MOD_ID)
 public class Stonehaul {
@@ -44,6 +45,8 @@ public class Stonehaul {
 
         if (event.includeClient()) {}
 
-        if (event.includeServer()) {}
+        if (event.includeServer()) {
+            gen.addProvider(new VanillaRecipeProvider(gen));
+        }
     }
 }
