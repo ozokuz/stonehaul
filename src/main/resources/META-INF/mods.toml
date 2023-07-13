@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="GPLv3"
+issueTrackerURL="https://github.com/ozokuz/stonehaul/issues/"
+
+[[mods]]
+modId="stonehaul"
+version="${file.jarVersion}"
+displayName="Stonehaul"
+displayURL="https://github.com/ozokuz/stonehaul"
+logoFile="examplemod.png"
+credits="IDK"
+authors="Ozoku"
+description='''
+An earlygame overhaul mod.
+'''
+
+[[dependencies.stonehaul]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.stonehaul]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
