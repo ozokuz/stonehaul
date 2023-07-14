@@ -1,0 +1,6 @@
+{
+  "parent": "stonehaul:block/vessel",
+  "textures": {
+    "all": "minecraft:block/clay"
+  }
+}

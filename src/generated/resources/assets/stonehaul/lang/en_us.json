@@ -1,4 +1,6 @@
 {
+  "block.stonehaul.large_vessel": "Large Vessel",
+  "block.stonehaul.unfired_large_vessel": "Unfired Large Vessel",
   "item.stonehaul.crude_axe": "Crude Axe",
   "item.stonehaul.crude_hoe": "Crude Hoe",
   "item.stonehaul.crude_shovel": "Crude Shovel",

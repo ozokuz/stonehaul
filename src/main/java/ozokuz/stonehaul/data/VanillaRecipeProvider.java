@@ -12,14 +12,17 @@ import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import ozokuz.stonehaul.common.content.Content;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.function.Consumer;
 
+import static net.minecraft.data.recipes.ShapedRecipeBuilder.shaped;
 import static net.minecraft.data.recipes.ShapelessRecipeBuilder.shapeless;
 import static net.minecraft.data.recipes.SimpleCookingRecipeBuilder.campfireCooking;
+import static ozokuz.stonehaul.Stonehaul.REGISTRATE;
 import static ozokuz.stonehaul.Stonehaul.res;
 
 public class VanillaRecipeProvider extends RecipeProvider {
@@ -31,6 +34,7 @@ public class VanillaRecipeProvider extends RecipeProvider {
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
         ingredients(consumer);
         tools(consumer);
+        vessels(consumer);
     }
 
     private void ingredients(Consumer<FinishedRecipe> consumer) {
@@ -44,6 +48,20 @@ public class VanillaRecipeProvider extends RecipeProvider {
         crudeToolRecipe(Content.CRUDE_AXE.get(), "HB", " R", consumer);
         crudeToolRecipe(Content.CRUDE_HOE.get(), "HH", "BR", consumer);
         crudeToolRecipe(Content.CRUDE_SHOVEL.get(), " H", "RB", consumer);
+    }
+
+    private void vessels(Consumer<FinishedRecipe> consumer) {
+        var unfiredLargeVessel = shaped(getItem(Content.UNFIRED_LARGE_VESSEL_ID))
+                .pattern("C C")
+                .pattern("C C")
+                .pattern("CCC")
+                .define('C', Items.CLAY_BALL);
+        save(unfiredLargeVessel, trigger(Items.CLAY_BALL), consumer);
+        save(campfireCooking(Ingredient.of(getItem(Content.UNFIRED_LARGE_VESSEL_ID)), getItem(Content.LARGE_VESSEL_ID), 0.1f, 200), trigger(Items.CLAY_BALL), consumer);
+    }
+
+    private Item getItem(String id) {
+        return REGISTRATE.get(id, ForgeRegistries.ITEMS.getRegistryKey()).get();
     }
 
     private CriterionTriggerInstance trigger(Item item) {
@@ -63,8 +81,7 @@ public class VanillaRecipeProvider extends RecipeProvider {
         var string = Content.PLANT_STRING.get();
         var stick = Items.STICK;
 
-        var builder = ShapedRecipeBuilder
-                .shaped(tool)
+        var builder = shaped(tool)
                 .pattern(row1)
                 .pattern(row2)
                 .define('H', flint) // Head
