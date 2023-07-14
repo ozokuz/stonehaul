@@ -1,4 +1,4 @@
-package ozokuz.stonehaul.common.tools;
+package ozokuz.stonehaul.common.content.tools;
 
 import net.minecraft.world.item.AxeItem;
 

@@ -11,8 +11,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.slf4j.Logger;
-import ozokuz.stonehaul.common.Content;
-import ozokuz.stonehaul.common.StonehaulCreativeModeTab;
+import ozokuz.stonehaul.common.content.Content;
+import ozokuz.stonehaul.common.content.StonehaulCreativeModeTab;
 import ozokuz.stonehaul.data.VanillaRecipeProvider;
 import ozokuz.stonehaul.integration.IntegrationTranslations;
 

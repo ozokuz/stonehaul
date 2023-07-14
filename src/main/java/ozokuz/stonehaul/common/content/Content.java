@@ -1,11 +1,11 @@
-package ozokuz.stonehaul.common;
+package ozokuz.stonehaul.common.content;
 
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.world.item.Item;
 import ozokuz.stonehaul.Stonehaul;
-import ozokuz.stonehaul.common.tools.CrudeAxe;
-import ozokuz.stonehaul.common.tools.CrudeHoe;
-import ozokuz.stonehaul.common.tools.CrudeShovel;
+import ozokuz.stonehaul.common.content.tools.CrudeAxe;
+import ozokuz.stonehaul.common.content.tools.CrudeHoe;
+import ozokuz.stonehaul.common.content.tools.CrudeShovel;
 
 import static ozokuz.stonehaul.Stonehaul.REGISTRATE;
 

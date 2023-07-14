@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import ozokuz.stonehaul.Stonehaul;
-import ozokuz.stonehaul.common.Content;
+import ozokuz.stonehaul.common.content.Content;
 import ozokuz.stonehaul.integration.IntegrationTranslations;
 
 @JeiPlugin
