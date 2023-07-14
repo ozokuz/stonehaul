@@ -1,7 +1,6 @@
 package ozokuz.stonehaul.common.content;
 
 import com.tterrag.registrate.util.entry.*;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Material;
 import ozokuz.stonehaul.Stonehaul;

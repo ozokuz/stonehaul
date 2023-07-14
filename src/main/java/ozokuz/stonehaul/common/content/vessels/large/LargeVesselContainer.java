@@ -18,7 +18,7 @@ import static ozokuz.stonehaul.common.lib.ContainerMenuHelper.SLOT_WIDTH;
 public class LargeVesselContainer extends AbstractContainerMenu {
     private final Container inventory;
 
-    public LargeVesselContainer(MenuType<?> menuType, int containerId, Inventory playerInventory, Container inventory) {
+    public LargeVesselContainer(MenuType<LargeVesselContainer> menuType, int containerId, Inventory playerInventory, Container inventory) {
         super(menuType, containerId);
 
         checkContainerSize(inventory, SIZE);
