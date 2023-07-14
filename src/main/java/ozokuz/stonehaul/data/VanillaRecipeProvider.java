@@ -58,6 +58,14 @@ public class VanillaRecipeProvider extends RecipeProvider {
                 .define('C', Items.CLAY_BALL);
         save(unfiredLargeVessel, trigger(Items.CLAY_BALL), consumer);
         save(campfireCooking(Ingredient.of(getItem(Content.UNFIRED_LARGE_VESSEL_ID)), getItem(Content.LARGE_VESSEL_ID), 0.1f, 200), trigger(Items.CLAY_BALL), consumer);
+
+        var unfiredSmallVessel = shaped(Content.UNFIRED_SMALL_VESSEL_ITEM.get())
+                .pattern("C C")
+                .pattern("C C")
+                .pattern(" C ")
+                .define('C', Items.CLAY_BALL);
+        save(unfiredSmallVessel, trigger(Items.CLAY_BALL), consumer);
+        save(campfireCooking(Ingredient.of(Content.UNFIRED_SMALL_VESSEL_ITEM.get()), Content.SMALL_VESSEL_ITEM.get(), 0.1f, 200), trigger(Items.CLAY_BALL), consumer);
     }
 
     private Item getItem(String id) {

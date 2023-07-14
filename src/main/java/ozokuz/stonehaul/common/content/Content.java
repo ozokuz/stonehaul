@@ -5,6 +5,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Material;
 import ozokuz.stonehaul.Stonehaul;
 import ozokuz.stonehaul.client.LargeVesselScreen;
+import ozokuz.stonehaul.client.SmallVesselScreen;
 import ozokuz.stonehaul.common.content.tools.CrudeAxe;
 import ozokuz.stonehaul.common.content.tools.CrudeHoe;
 import ozokuz.stonehaul.common.content.tools.CrudeShovel;
@@ -12,6 +13,8 @@ import ozokuz.stonehaul.common.content.vessels.large.LargeVesselBlock;
 import ozokuz.stonehaul.common.content.vessels.large.LargeVesselBlockEntity;
 import ozokuz.stonehaul.common.content.vessels.large.LargeVesselContainer;
 import ozokuz.stonehaul.common.content.vessels.large.UnfiredLargeVesselBlock;
+import ozokuz.stonehaul.common.content.vessels.small.SmallVesselContainer;
+import ozokuz.stonehaul.common.content.vessels.small.SmallVesselItem;
 
 import static ozokuz.stonehaul.Stonehaul.REGISTRATE;
 
@@ -61,6 +64,12 @@ public class Content {
             .register();
     public static final BlockEntityEntry<LargeVesselBlockEntity> LARGE_VESSEL_BLOCK_ENTITY = REGISTRATE.blockEntity(LARGE_VESSEL_ID, LargeVesselBlockEntity::new).register();
     public static final MenuEntry<LargeVesselContainer> LARGE_VESSEL_CONTAINER = REGISTRATE.menu(LARGE_VESSEL_ID, LargeVesselContainer::fromNetwork, () -> LargeVesselScreen::new).register();
+    // Unfired Small Vessel
+    public static final RegistryEntry<Item> UNFIRED_SMALL_VESSEL_ITEM = REGISTRATE.item("unfired_small_vessel", Item::new).lang("Unfired Small Vessel").register();
+    // Small Vessel
+    public static final String SMALL_VESSEL_ID = "small_vessel";
+    public static final RegistryEntry<SmallVesselItem> SMALL_VESSEL_ITEM = REGISTRATE.item(SMALL_VESSEL_ID, SmallVesselItem::new).lang("Small Vessel").register();
+    public static final MenuEntry<SmallVesselContainer> SMALL_VESSEL_CONTAINER = REGISTRATE.menu(SMALL_VESSEL_ID, SmallVesselContainer::fromNetwork, () -> SmallVesselScreen::new).register();
 
     public static void register() {}
 }
