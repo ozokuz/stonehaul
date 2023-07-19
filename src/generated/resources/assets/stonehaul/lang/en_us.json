@@ -1,4 +1,5 @@
 {
+  "block.stonehaul.chopping_block": "Chopping Block",
   "block.stonehaul.large_vessel": "Large Vessel",
   "block.stonehaul.unfired_large_vessel": "Unfired Large Vessel",
   "item.stonehaul.crude_axe": "Crude Axe",
@@ -9,5 +10,6 @@
   "item.stonehaul.small_vessel": "Small Vessel",
   "item.stonehaul.unfired_small_vessel": "Unfired Small Vessel",
   "itemGroup.stonehaul": "Stonehaul",
-  "stonehaul.jei.info.plant_fiber": "An ingredient used in crafting. Obtained by cutting grass with a knife."
+  "stonehaul.jei.info.plant_fiber": "An ingredient used in crafting. Obtained by cutting grass with a knife.",
+  "stonehaul.jei.recipe.chopping": "Chopping"
 }

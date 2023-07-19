@@ -1,0 +1,10 @@
+{
+  "type": "stonehaul:chopping_block",
+  "ingredient": {
+    "tag": "minecraft:crimson_stems"
+  },
+  "result": {
+    "item": "minecraft:crimson_planks",
+    "count": 2
+  }
+}

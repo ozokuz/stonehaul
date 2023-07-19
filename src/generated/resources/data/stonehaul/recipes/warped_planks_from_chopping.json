@@ -1,0 +1,10 @@
+{
+  "type": "stonehaul:chopping_block",
+  "ingredient": {
+    "tag": "minecraft:warped_stems"
+  },
+  "result": {
+    "item": "minecraft:warped_planks",
+    "count": 2
+  }
+}

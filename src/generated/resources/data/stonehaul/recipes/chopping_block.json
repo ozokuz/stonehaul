@@ -1,0 +1,14 @@
+{
+  "type": "stonehaul:tool_usage_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "stonehaul:woodcutters"
+    }
+  ],
+  "result": {
+    "item": "stonehaul:chopping_block"
+  }
+}
