@@ -38,7 +38,7 @@ An earlygame overhaul mod.
 
 [[dependencies.stonehaul]]
     modId="tconstruct"
-    mandatory=true
+    mandatory=false
     versionRange="[3.6.4,)"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"

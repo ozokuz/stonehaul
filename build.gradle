@@ -108,6 +108,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {
     maven { url 'https://maven.tterrag.com/' } // Registrate
     maven { url 'https://maven.blamejared.com' } // JEI
+    // maven { url 'https://dvs1.progwml6.com/files/maven' } // Mantle
     maven {
         url "https://cursemaven.com"
         content { includeGroup "curse.maven" }
@@ -149,6 +150,11 @@ dependencies {
 
     // Farmers Delight
     implementation fg.deobf('curse.maven:farmers-delight-398521:4636009')
+
+    // Tinkers' Construct
+    // implementation fg.deobf('slimeknights.tconstruct:TConstruct:1.18.2-3.6.4.113')
+    // implementation fg.deobf('slimeknights.mantle:Mantle:1.18.2-1.9.45')
+
     // Make less noise, pls
     runtimeOnly fg.deobf('curse.maven:lazy-dfu-forge-460819:3544496')
 
