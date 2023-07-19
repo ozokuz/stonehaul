@@ -1,4 +1,5 @@
 {
+  "block.stonehaul.chopping_block": "\u029E\u0254o\u05DF\u15FA bu\u0131ddo\u0265\u0186",
   "block.stonehaul.large_vessel": "\u05DF\u01DDss\u01DD\u039B \u01DDb\u0279\u0250\uA780",
   "block.stonehaul.unfired_large_vessel": "\u05DF\u01DDss\u01DD\u039B \u01DDb\u0279\u0250\uA780 p\u01DD\u0279\u0131\u025Fu\u2229",
   "item.stonehaul.crude_axe": "\u01DDx\u2C6F \u01DDpn\u0279\u0186",
@@ -9,5 +10,6 @@
   "item.stonehaul.small_vessel": "\u05DF\u01DDss\u01DD\u039B \u05DF\u05DF\u0250\u026FS",
   "item.stonehaul.unfired_small_vessel": "\u05DF\u01DDss\u01DD\u039B \u05DF\u05DF\u0250\u026FS p\u01DD\u0279\u0131\u025Fu\u2229",
   "itemGroup.stonehaul": "\u05DFn\u0250\u0265\u01DDuo\u0287S",
-  "stonehaul.jei.info.plant_fiber": "\u02D9\u01DD\u025F\u0131u\u029E \u0250 \u0265\u0287\u0131\u028D ss\u0250\u0279b bu\u0131\u0287\u0287n\u0254 \u028Eq p\u01DDu\u0131\u0250\u0287qO \u02D9bu\u0131\u0287\u025F\u0250\u0279\u0254 u\u0131 p\u01DDsn \u0287u\u01DD\u0131p\u01DD\u0279bu\u0131 u\u2C6F"
+  "stonehaul.jei.info.plant_fiber": "\u02D9\u01DD\u025F\u0131u\u029E \u0250 \u0265\u0287\u0131\u028D ss\u0250\u0279b bu\u0131\u0287\u0287n\u0254 \u028Eq p\u01DDu\u0131\u0250\u0287qO \u02D9bu\u0131\u0287\u025F\u0250\u0279\u0254 u\u0131 p\u01DDsn \u0287u\u01DD\u0131p\u01DD\u0279bu\u0131 u\u2C6F",
+  "stonehaul.jei.recipe.chopping": "bu\u0131ddo\u0265\u0186"
 }

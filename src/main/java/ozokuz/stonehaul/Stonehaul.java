@@ -2,6 +2,7 @@ package ozokuz.stonehaul;
 
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.providers.ProviderType;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,14 +14,19 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.slf4j.Logger;
 import ozokuz.stonehaul.common.content.Content;
 import ozokuz.stonehaul.common.content.StonehaulCreativeModeTab;
+import ozokuz.stonehaul.data.StonehaulItemTags;
+import ozokuz.stonehaul.data.StonehaulRecipeProvider;
 import ozokuz.stonehaul.data.VanillaRecipeProvider;
 import ozokuz.stonehaul.integration.IntegrationTranslations;
+
+import java.util.Random;
 
 @Mod(Stonehaul.MOD_ID)
 public class Stonehaul {
     public static final String MOD_ID = "stonehaul";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
+    public static final Random RANDOM = new Random();
 
     public static ResourceLocation res(String path) {
         return new ResourceLocation(MOD_ID, path);
@@ -32,7 +38,7 @@ public class Stonehaul {
 
         StonehaulCreativeModeTab.init();
         IntegrationTranslations.init();
-        Content.register();
+        Content.register(modEventBus);
 
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::gatherData);
@@ -43,12 +49,15 @@ public class Stonehaul {
     }
 
     private void gatherData(final GatherDataEvent event) {
+        REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, StonehaulItemTags::addTags);
+
         DataGenerator gen = event.getGenerator();
 
         if (event.includeClient()) {}
 
         if (event.includeServer()) {
             gen.addProvider(new VanillaRecipeProvider(gen));
+            gen.addProvider(new StonehaulRecipeProvider(gen));
         }
     }
 }

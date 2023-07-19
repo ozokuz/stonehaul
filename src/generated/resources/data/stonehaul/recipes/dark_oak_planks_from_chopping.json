@@ -1,0 +1,10 @@
+{
+  "type": "stonehaul:chopping_block",
+  "ingredient": {
+    "tag": "minecraft:dark_oak_logs"
+  },
+  "result": {
+    "item": "minecraft:dark_oak_planks",
+    "count": 2
+  }
+}
