@@ -13,6 +13,9 @@ fd677310463081b1f6282df49204e00992c4bd94 assets/stonehaul/models/item/plant_stri
 2b3deaec5f924cae854969f7ee73b41ebeadf735 assets/stonehaul/models/item/small_vessel.json
 dc80798d78b72bf16638cfe180a0c481786007c0 assets/stonehaul/models/item/unfired_large_vessel.json
 aab64e1e6dab4458c147935f0932c4034055e415 assets/stonehaul/models/item/unfired_small_vessel.json
+e8a6e8319cba48a1a2032327a063fb25a3995851 data/forge/tags/items/tools/axes.json
+2a23de552169d6bbfa8278805180130e68b0a7cd data/forge/tags/items/tools/hoes.json
+83d5694b86ac93528851c888d3278d1bd8758b2a data/forge/tags/items/tools/shovels.json
 2ac8fd64c70ad27f914b5396f4703738e45b1a2f data/stonehaul/advancements/recipes/farmersdelight/straw_by_drying.json
 b203204776d8daa7cc5700ded86adb5f9f67fd0d data/stonehaul/advancements/recipes/stonehaul/crude_axe.json
 c723cf64fe5d7a8b5bb1904cea0c09c4e0082fa4 data/stonehaul/advancements/recipes/stonehaul/crude_hoe.json

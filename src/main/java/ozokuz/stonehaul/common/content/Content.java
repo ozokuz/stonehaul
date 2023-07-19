@@ -1,6 +1,9 @@
 package ozokuz.stonehaul.common.content;
 
 import com.tterrag.registrate.util.entry.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Material;
 import ozokuz.stonehaul.Stonehaul;
@@ -26,10 +29,14 @@ public class Content {
         REGISTRATE.addRawLang("itemGroup." + Stonehaul.MOD_ID, "Stonehaul");
     }
 
+    public static final TagKey<Item> FORGE_TOOLS_AXES = ItemTags.create(new ResourceLocation("forge", "tools/axes"));
+    public static final TagKey<Item> FORGE_TOOLS_HOES = ItemTags.create(new ResourceLocation("forge", "tools/hoes"));
+    public static final TagKey<Item> FORGE_TOOLS_SHOVELS = ItemTags.create(new ResourceLocation("forge", "tools/shovels"));
+
     // Crude Tools
-    public static final RegistryEntry<CrudeAxe> CRUDE_AXE = REGISTRATE.item("crude_axe", CrudeAxe::new).lang("Crude Axe").register();
-    public static final RegistryEntry<CrudeHoe> CRUDE_HOE = REGISTRATE.item("crude_hoe", CrudeHoe::new).lang("Crude Hoe").register();
-    public static final RegistryEntry<CrudeShovel> CRUDE_SHOVEL = REGISTRATE.item("crude_shovel", CrudeShovel::new).lang("Crude Shovel").register();
+    public static final RegistryEntry<CrudeAxe> CRUDE_AXE = REGISTRATE.item("crude_axe", CrudeAxe::new).lang("Crude Axe").tag(FORGE_TOOLS_AXES).register();
+    public static final RegistryEntry<CrudeHoe> CRUDE_HOE = REGISTRATE.item("crude_hoe", CrudeHoe::new).lang("Crude Hoe").tag(FORGE_TOOLS_HOES).register();
+    public static final RegistryEntry<CrudeShovel> CRUDE_SHOVEL = REGISTRATE.item("crude_shovel", CrudeShovel::new).lang("Crude Shovel").tag(FORGE_TOOLS_SHOVELS).register();
 
     // Crafting Resources
     public static final RegistryEntry<Item> PLANT_FIBER = REGISTRATE.item("plant_fiber", Item::new).lang("Plant Fiber").register();
